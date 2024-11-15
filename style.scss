@@ -1,0 +1,88 @@
+$forest-green: #2a5d34;
+$deep-green: #18331b;
+$jewel-blue: #5b8aa0;
+$jewel-purple: #6e4a7e;
+$jewel-red: #b03e5c;
+$jewel-yellow: #c18f2e;
+$light-cream: #f5f1e3;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $deep-green;
+    color: $light-cream;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.top-menu {
+    background-color: $forest-green;
+    padding: 1rem;
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu ul li {
+    margin: 0 1rem;
+}
+
+.top-menu ul li a {
+    text-decoration: none;
+    color: $light-cream;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.top-menu ul li a:hover {
+    color: $jewel-yellow;
+}
+
+.content-section {
+    padding: 2rem;
+    background-color: $forest-green;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+.content-section h2 {
+    color: $jewel-purple;
+    border-bottom: 2px solid $jewel-blue;
+    padding-bottom: 0.5rem;
+}
+
+.experiment-description {
+    margin-top: 1.5rem;
+    background-color: $deep-green;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.experiment-description h3 {
+    color: $jewel-red;
+}
+
+.experiment-description p {
+    color: $light-cream;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: $forest-green;
+    color: $light-cream;
+    border-top: 2px solid $jewel-blue;
+}
+
+/* Add additional styles as needed for buttons, links, etc. */
