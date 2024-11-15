@@ -1,88 +1,121 @@
-$forest-green: #2a5d34;
-$deep-green: #18331b;
-$jewel-blue: #5b8aa0;
-$jewel-purple: #6e4a7e;
-$jewel-red: #b03e5c;
-$jewel-yellow: #c18f2e;
-$light-cream: #f5f1e3;
+// Variables for colors
+$background-color: #013220; // Dark green
+$text-color: #e0e0e0; // Light gray for readability
+$accent-color: #4b9f9a; // Jewel tone - teal
+title-accent-color: #bb86fc; // Jewel tone - amethyst
+$button-bg-color: #2f4f4f; // Dark forest green
+$button-hover-color: #6b8e23; // Olive
 
+// Mixin for flex centering
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Global styles
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: $deep-green;
-    color: $light-cream;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-.header-image {
-    width: 100%;
-    height: auto;
-    display: block;
+a {
+  color: $accent-color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($accent-color, 10%);
+  }
 }
 
-.top-menu {
-    background-color: $forest-green;
-    padding: 1rem;
+// Container styling
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.top-menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.top-menu ul li {
-    margin: 0 1rem;
-}
-
-.top-menu ul li a {
-    text-decoration: none;
-    color: $light-cream;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.top-menu ul li a:hover {
-    color: $jewel-yellow;
-}
-
-.content-section {
-    padding: 2rem;
-    background-color: $forest-green;
-    border-radius: 10px;
-    margin: 2rem;
-}
-
-.content-section h2 {
-    color: $jewel-purple;
-    border-bottom: 2px solid $jewel-blue;
-    padding-bottom: 0.5rem;
-}
-
-.experiment-description {
-    margin-top: 1.5rem;
-    background-color: $deep-green;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.experiment-description h3 {
-    color: $jewel-red;
-}
-
-.experiment-description p {
-    color: $light-cream;
-}
-
-footer {
+// Header styles
+header {
+  background-color: darken($background-color, 10%);
+  padding: 20px 0;
+  
+  h1 {
+    color: $title-accent-color;
     text-align: center;
-    padding: 1rem;
-    background-color: $forest-green;
-    color: $light-cream;
-    border-top: 2px solid $jewel-blue;
+  }
 }
 
-/* Add additional styles as needed for buttons, links, etc. */
+// Main content styles
+main {
+  padding: 20px;
+
+  .content-section {
+    background-color: lighten($background-color, 5%);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    h2 {
+      color: $title-accent-color;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// Button styling
+button {
+  background-color: $button-bg-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}
+
+// Footer styles
+footer {
+  @include flex-center;
+  background-color: darken($background-color, 15%);
+  padding: 10px;
+  color: lighten($text-color, 20%);
+  font-size: 0.9rem;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  main .content-section {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+} 
+
