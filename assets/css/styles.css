@@ -1,0 +1,117 @@
+/* Variables for colors */
+:root {
+  --background-color: #013220; /* Dark green */
+  --text-color: #e0e0e0; /* Light gray for readability */
+  --accent-color: #4b9f9a; /* Jewel tone - teal */
+  --title-accent-color: #bb86fc; /* Jewel tone - amethyst */
+  --button-bg-color: #2f4f4f; /* Dark forest green */
+  --button-hover-color: #6b8e23; /* Olive */
+}
+
+/* Global styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3b807e; /* Darken accent color by 10% */
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #012b1e; /* Darken background color by 10% */
+  padding: 20px 0;
+}
+
+header h1 {
+  color: var(--title-accent-color);
+  text-align: center;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+.content-section {
+  background-color: #084c36; /* Lighten background color by 5% */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  color: var(--title-accent-color);
+}
+
+.content-section p {
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+button {
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #011f19; /* Darken background color by 15% */
+  padding: 10px;
+  color: #ffffff; /* Lighten text color by 20% */
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  main .content-section {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
