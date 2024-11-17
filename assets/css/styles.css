@@ -80,8 +80,8 @@ main {
 
 .twine-game-container {
   width: 100%;
-  max-width: 800px;
-  height: 600px;
+  max-width: 1000px;
+  height: 800px;
   margin: 20px auto;
   border: 2px solid var(--accent-color);
   border-radius: 10px;
