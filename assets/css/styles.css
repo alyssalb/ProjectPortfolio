@@ -65,6 +65,29 @@ main {
   margin-bottom: 15px;
 }
 
+/* About Me Section for Twine Game */
+.about-me {
+  background-color: #084c36; /* Lighten background color by 5% */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.about-me h2 {
+  color: var(--title-accent-color);
+  text-align: center;
+}
+
+.twine-game-container {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 /* Button styling */
 button {
   background-color: var(--button-bg-color);
@@ -103,6 +126,10 @@ footer {
   main .content-section {
     padding: 10px;
   }
+
+  .twine-game-container {
+    height: 400px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -113,5 +140,9 @@ footer {
   button {
     width: 100%;
     padding: 12px;
+  }
+
+  .twine-game-container {
+    height: 300px;
   }
 }
