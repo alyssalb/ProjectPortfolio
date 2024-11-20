@@ -112,6 +112,40 @@ footer {
   color: #ffffff; /* Lighten text color by 20% */
   font-size: 0.9rem;
 }
+      
+/* Styles for the Zine carousel */
+.zine-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  position: relative;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zine-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.zine-controls {
+  margin-top: 10px;
+  text-align: center;
+}
+.zine-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.zine-button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
 
 /* Responsive design */
 @media (max-width: 768px) {
