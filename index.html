@@ -5,121 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Portfolio - Barrack AI Experiments</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-
+    <style>
+        /* Additional styles for the main page */
+        .section-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .section-link:hover {
+            background: #0056b3;
+        }
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="assets/header.jpg" alt="Fantasy Cartoon Header" class="header-image" style="width: 100%; height: 250px;">
         <nav class="top-menu">
             <ul>
-                <li><a href="#Zine">Zine</a></li>
-                <li><a href="#Recommender">Recommender</a></li>
-                <li><a href="#Game">Game</a></li>
-                <li><a href="#Model">Model</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="zine.html">Zine</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="model.html">Model</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="about-me">
-            <h2>About Me</h2>
-            <p>Here you can explore more about my research interests, theatrical philosophies, skills, and hobbies through this interactive Twine experience.</p>
-            <div class="twine-game-container">
-                <iframe src="https://alyssalb.github.io/AboutMeGame/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        <div class="main-content">
+            <h1>Welcome to My AI Portfolio</h1>
+            <p>Explore my experiments and projects in Artificial Intelligence, where I combine creativity with technology.</p>
+            <div>
+                <a href="about.html" class="section-link">About Me</a>
+                <a href="zine.html" class="section-link">Zine</a>
+                <a href="recommender.html" class="section-link">Recommender</a>
+                <a href="game.html" class="section-link">Game</a>
+                <a href="model.html" class="section-link">Model</a>
             </div>
         </div>
-
-        <section id="Zine" class="content-section">
-            <h2>Zine</h2>
-            <p>I conceptualized AI through a horror lens, with all the scholarship that goes with that - ideas about the sympathetic monstrous vs "pure evil", about possession as a framework for loss and regain of agency, ideas of cannibalism, and the figure of the "final girl" both in its distanced androgyny and in its near-parodic "exemplar of her group" sort of puritanism.
-I had images of Possession (AI "forcing" humans to use it for nefarious purposes like cheating and plagiarism, AI "thinking for" us, AI as ritualistic puppeteer); Cannibalism (consuming the art and work of humans and spitting it out mangled and gnarled; layered images centered on the consumption of work (like an Anthropophagus type creature consuming its inspiration, Goya's Saturn Devouring His Son), and famous text being consumed by a textual-styled monster, the last of which I reappropriated for my reference page at the end of the zine); and finally the Final Girl (Carol J. Clover, Men, Women, and Chain Saws) (distancing androgyny as a projection surface; survival of attacks from humanist ethics and from capitalist greed threatening to burn it out too quickly; in the end being seen as they are, stripped to a parody of a person; a reflective final girl determining if they are now a monster). </p>
-            <!-- Zine Carousel Integration -->
-            <div class="zine-container">
-                <img id="zineImage" src="Zine1.jpg" alt="Zine Image" />
-            </div>
-            <div class="zine-controls">
-                <button id="prev" class="zine-button" disabled>Previous</button>
-                <button id="next" class="zine-button">Next</button>
-            </div>
-        </section>
-
-        <section id="Recommender" class="content-section">
-            <h2>Recommender</h2>
-            <p>I would love to update this one as well to include more of a database from which to pull recommendations, beef up the genres it searches for, improve nuance and overlap in genre definitions, and debug repeat recommendations out of the code. This website recommends horror movies to you based on your rankings of a set of movies and the subgenres they fall into. Working with my system a lot allowed me to double check that the genres that ChatGPT placed films in were correct to my more personal understanding of the nuances between the genre - it is a little tricky sometimes to pick apart, for instance “body horror” and “gore”, or “folk horror” and “vampire” - there is a lot of nuance and overlap, and having knowledge allowed me to better check for errors in the code and in the original information provided for the json.</p>
-                <!-- Embedded Recommender Website -->
-                <div class="recommender-container">
-                    <iframe src="https://alyssalb.github.io/HorrorRecommender/" allowfullscreen></iframe>
-                </div>
-        </section>
-
-
-        <section id="Game" class="content-section">
-            <h2>Game</h2>
-            <p>I made a Light Board Op Sim! Kind of. This is a very simplified and itty bitty version of what it’s like to be in control of the lights in a stage project. It deals with 3 big properties of light - color, position, and intensity (brightness), and lets the player control the properties to make their own version of the single spotlight. I also played a little with “booth culture”, making sure to simulate the dark room and the assorted drinks and snacks that are essential to life on show days - a special nod to coffee and required break time.</p>
-                <!-- Embedded Game Website -->
-                <div class="game-container">
-                    <iframe src="https://alyssalb.github.io/Lighting-Sim/" allowfullscreen></iframe>
-                </div>
-        </section>
-
-
-       <section id="Model" class="content-section">
-             <h2>Model</h2>
-             <p>I worked on this a bit to get it to work, iterating the code with ChatGPT until it functioned. This project aimed to source open access training data to train a model that could distinguish between RGB colors, with the hope of eventually iterating it to be able to identify lighting color changes in real time on stage. This still needs some work as far as live lighting detection goes, but it currently can identify RGB main colors in images with decent accuracy. 
-To use, upload a .jpg (preferably one that contains an RGB color as the main color) and click “identify color”. </p>
-                <!-- Embedded Model Website -->
-                <div class="model-container">
-                    <iframe src="https://alyssalb.github.io/ColorModel1/" allowfullscreen></iframe>
-               </div>
-     </section>
-
     </main>
 
     <footer>
         <nav class="site-map">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#Zine">Zine</a></li>
-                <li><a href="#Recommender">Recommender</a></li>
-                <li><a href="#Game">Game</a></li>
-                <li><a href="#Model">Model</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="zine.html">Zine</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="model.html">Model</a></li>
             </ul>
         </nav>
         <p>2024 Barrack AI Portfolio. All rights reserved.</p>
     </footer>
-
-    <script>
-        // JavaScript code for the Zine carousel
-        const zineImage = document.getElementById('zineImage');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        let currentPage = 1;
-        const totalPages = 5; // Total number of images
-
-        function updateButtons() {
-            prevButton.disabled = currentPage === 1;
-            nextButton.disabled = currentPage === totalPages;
-        }
-
-        function showPage(index) {
-            currentPage = index;
-            zineImage.src = `Zine${currentPage}.jpg`;
-            updateButtons();
-        }
-
-        prevButton.addEventListener('click', () => {
-            if (currentPage > 1) {
-                showPage(currentPage - 1);
-            }
-        });
-
-        nextButton.addEventListener('click', () => {
-            if (currentPage < totalPages) {
-                showPage(currentPage + 1);
-            }
-        });
-
-        updateButtons();
-    </script>
 </body>
 </html>
+
