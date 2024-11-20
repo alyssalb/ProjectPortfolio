@@ -147,6 +147,19 @@ footer {
   cursor: not-allowed;
 }
 
+/* Styles for the Recommender iframe */
+.recommender-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    position: relative;
+}
+.recommender-container iframe {
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    border: none;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .container {
