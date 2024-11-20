@@ -150,13 +150,13 @@ footer {
 /* Styles for the Recommender iframe */
 .recommender-container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 20px auto;
     position: relative;
 }
 .recommender-container iframe {
     width: 100%;
-    height: 600px; /* Adjust the height as needed */
+    height: 1100px; /* Adjust the height as needed */
     border: none;
 }
 
