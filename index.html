@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Portfolio - Barrack AI Experiments</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 <body>
     <header>
@@ -20,18 +21,24 @@
     </header>
 
     <main>
-      <div class="about-me">
-          <h2>About Me</h2>
-              <p>Here you can explore more about my research interests, theatrical philosophies, skills, and hobbies through this interactive Twine experience.</p>
-                  <div class="twine-game-container">
-                    <iframe src="https://alyssalb.github.io/AboutMeGame/" width="100%" height="100%" frameborder-"0" allowfullscreen></iframe>
-                 </div>
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>Here you can explore more about my research interests, theatrical philosophies, skills, and hobbies through this interactive Twine experience.</p>
+            <div class="twine-game-container">
+                <iframe src="https://alyssalb.github.io/AboutMeGame/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
 
-
-         <section id="Zine" class="content-section">
+        <section id="Zine" class="content-section">
             <h2>Zine</h2>
-            <a href="zine.html" class="zine-button">Explore the Zine</a>
+            <!-- Zine Carousel Integration -->
+            <div class="zine-container">
+                <img id="zineImage" src="Zine1.jpg" alt="Zine Image" />
+            </div>
+            <div class="zine-controls">
+                <button id="prev" class="zine-button" disabled>Previous</button>
+                <button id="next" class="zine-button">Next</button>
+            </div>
         </section>
 
         <section id="recommender" class="content-section">
@@ -50,19 +57,51 @@
         </section>
     </main>
 
-  <footer>
+    <footer>
         <nav class="site-map">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="zine.html">Zine</a></li>
+                <li><a href="#Zine">Zine</a></li>
                 <li><a href="#Recommender">Recommender</a></li>
                 <li><a href="#Game">Game</a></li>
                 <li><a href="#Model">Model</a></li>
             </ul>
         </nav>
-       
-      <p>2024 Barrack AI Portfolio. All rights reserved.</p>
+        <p>2024 Barrack AI Portfolio. All rights reserved.</p>
     </footer>
-
-</html>
+
+    <script>
+        // JavaScript code for the Zine carousel
+        const zineImage = document.getElementById('zineImage');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentPage = 1;
+        const totalPages = 5; // Total number of images
+
+        function updateButtons() {
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+        }
+
+        function showPage(index) {
+            currentPage = index;
+            zineImage.src = `Zine${currentPage}.jpg`;
+            updateButtons();
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                showPage(currentPage + 1);
+            }
+        });
+
+        updateButtons();
+    </script>
+</body>
 </html>
