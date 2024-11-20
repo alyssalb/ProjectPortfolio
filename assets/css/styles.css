@@ -186,6 +186,16 @@ footer {
     border: none;
 }
 
+.music-player {
+    text-align: center;
+    margin: 20px auto;
+}
+.music-player h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
 /* Responsive design */
 @media (max-width: 768px) {
   .container {
